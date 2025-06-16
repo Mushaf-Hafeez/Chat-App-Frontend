@@ -6,7 +6,7 @@ export const fetchUsers = async () => {
     return res.data;
   } catch (error) {
     console.log("Error in the login function: ", error.message);
-    return error.response.data;
+    return error.response?.data;
   }
 };
 
@@ -16,7 +16,7 @@ export const sendMessage = async (receiverId, data) => {
     return res.data;
   } catch (error) {
     console.log("Error in the send message function: ", error.message);
-    return error.response.data;
+    return error.response?.data;
   }
 };
 
@@ -26,6 +26,6 @@ export const getMessages = async (id) => {
     return res.data;
   } catch (error) {
     console.log("Error in the get messages function: ", error.message);
-    return error.response.data;
+    return error.response?.data;
   }
 };

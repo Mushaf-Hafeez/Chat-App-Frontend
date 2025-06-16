@@ -10,8 +10,8 @@ export const login = async (data) => {
     const res = await api.post("/auth/login", data);
     return res.data;
   } catch (error) {
-    // console.log("Error in the login function: ", error.message);
-    return error.response.data;
+    console.log("Error in the login function: ", error.message);
+    return error.response?.data;
   }
 };
 
@@ -21,7 +21,7 @@ export const signup = async (data) => {
     return res.data;
   } catch (error) {
     console.log("Error in the login function: ", error.message);
-    return error.response.data;
+    return error.response?.data;
   }
 };
 
@@ -30,8 +30,8 @@ export const checkAuth = async () => {
     const res = await api.get("/auth/checkAuth");
     return res.data;
   } catch (error) {
-    // console.log("Error in the login function: ", error.message);
-    return error.response.data;
+    console.log("Error in the login function: ", error.message);
+    return error.response?.data;
   }
 };
 
@@ -41,7 +41,7 @@ export const logout = async () => {
     return res.data;
   } catch (error) {
     console.log("Error in the login function: ", error.message);
-    return error.response.data;
+    return error.response?.data;
   }
 };
 
@@ -51,6 +51,6 @@ export const updateImage = async (data) => {
     return res.data;
   } catch (error) {
     console.log("Error in the update image function: ", error.message);
-    return error.response.data;
+    return error.response?.data;
   }
 };
