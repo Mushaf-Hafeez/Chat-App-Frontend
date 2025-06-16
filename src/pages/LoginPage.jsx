@@ -23,7 +23,7 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isLogging, setIsAuthenticated } = useSelector((state) => state.auth);
+  const { isLogging } = useSelector((state) => state.auth);
 
   const {
     register,
