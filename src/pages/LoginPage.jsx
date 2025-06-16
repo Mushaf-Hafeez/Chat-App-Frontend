@@ -68,7 +68,7 @@ const LoginPage = () => {
       console.log("result in the checking function in login page is: ", result);
 
       if (result.success) {
-        // dispatch(setIsAuthenticated({ value: true }));
+        dispatch(setIsAuthenticated({ value: true }));
         navigate("/");
       }
     } catch (error) {
