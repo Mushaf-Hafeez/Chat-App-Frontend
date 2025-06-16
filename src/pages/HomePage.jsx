@@ -20,7 +20,7 @@ const HomePage = () => {
         dispatch(setIsAuthenticated({ value: true }));
       }
     } catch (error) {
-      console.log("Error in the checking funciton: ", error.message);
+      console.log("Error in the checking function: ", error.message);
     }
   };
 

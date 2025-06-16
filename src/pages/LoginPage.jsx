@@ -64,14 +64,14 @@ const LoginPage = () => {
     try {
       const result = await checkAuth();
 
-      console.log("result in the checking function is: ", result);
+      console.log("result in the checking function in login page is: ", result);
 
       if (result.success) {
         dispatch(setIsAuthenticated({ value: true }));
         navigate("/");
       }
     } catch (error) {
-      console.log("Error in the checking funciton: ", error.message);
+      console.log("Error in the checking function: ", error.message);
     }
   };
 
