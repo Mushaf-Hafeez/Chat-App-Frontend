@@ -23,7 +23,7 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isLogging } = useSelector((state) => state.auth);
+  const { isLogging, setIsAuthenticated } = useSelector((state) => state.auth);
 
   const {
     register,
@@ -49,6 +49,7 @@ const LoginPage = () => {
       dispatch(setImage({ value: result.data.image }));
       dispatch(setDate({ value: result.data.createdAt }));
       toast.success("Login successful.");
+      dispatch(setIsAuthenticated({ value: true }));
       dispatch(setSocketConnect({ value: connectSocket() }));
       dispatch(setUsersOnline({ value: onlineUsers }));
       reset();
@@ -76,7 +77,7 @@ const LoginPage = () => {
   };
 
   useEffect(() => {
-    checking();
+    // checking();
   }, []);
 
   return (
