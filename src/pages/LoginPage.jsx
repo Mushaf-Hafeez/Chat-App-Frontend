@@ -64,6 +64,8 @@ const LoginPage = () => {
     try {
       const result = await checkAuth();
 
+      console.log("result in the checking function is: ", result);
+
       if (result.success) {
         dispatch(setIsAuthenticated({ value: true }));
         navigate("/");
