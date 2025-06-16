@@ -49,7 +49,7 @@ const LoginPage = () => {
       dispatch(setImage({ value: result.data.image }));
       dispatch(setDate({ value: result.data.createdAt }));
       toast.success("Login successful.");
-      // dispatch(setIsAuthenticated({ value: true }));
+      dispatch(setIsAuthenticated({ value: true }));
       dispatch(setSocketConnect({ value: connectSocket() }));
       dispatch(setUsersOnline({ value: onlineUsers }));
       reset();
