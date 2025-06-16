@@ -10,7 +10,7 @@ export const login = async (data) => {
     const res = await api.post("/auth/login", data);
     return res.data;
   } catch (error) {
-    console.log("Error in the login function: ", error.message);
+    // console.log("Error in the login function: ", error.message);
     return error.response.data;
   }
 };
@@ -30,7 +30,7 @@ export const checkAuth = async () => {
     const res = await api.get("/auth/checkAuth");
     return res.data;
   } catch (error) {
-    console.log("Error in the login function: ", error.message);
+    // console.log("Error in the login function: ", error.message);
     return error.response.data;
   }
 };
