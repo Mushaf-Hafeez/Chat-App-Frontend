@@ -2,8 +2,10 @@ import { io } from "socket.io-client";
 
 export let socket;
 
+const backendURL = import.meta.env.VITE_APP_BACKEND_URL;
+
 export const connectSocket = () => {
-  socket = io(import.meta.evn.VITE_APP_BACKEND_URL, {
+  socket = io(backendURL, {
     query: {
       userId: JSON.parse(localStorage.getItem("id")),
     },
