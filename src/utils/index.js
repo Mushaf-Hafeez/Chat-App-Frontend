@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 export let socket;
 
 export const connectSocket = () => {
-  socket = io("http://localhost:3000", {
+  socket = io(import.meta.evn.VITE_BACKEND_URL, {
     query: {
       userId: JSON.parse(localStorage.getItem("id")),
     },
