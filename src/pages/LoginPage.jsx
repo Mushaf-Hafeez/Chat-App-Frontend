@@ -41,12 +41,16 @@ const LoginPage = () => {
       localStorage.setItem("id", JSON.stringify(result.data.id));
       localStorage.setItem("name", JSON.stringify(result.data.name));
       localStorage.setItem("email", JSON.stringify(result.data.email));
-      localStorage.setItem("image", JSON.stringify(result.data.image));
+      if (result.data.image) {
+        localStorage.setItem("image", JSON.stringify(result.data.image));
+      }
       localStorage.setItem("createdAt", JSON.stringify(result.data.createdAt));
       dispatch(setId({ value: result.data.id }));
       dispatch(setName({ value: result.data.name }));
       dispatch(setEmail({ value: result.data.email }));
-      dispatch(setImage({ value: result.data.image }));
+      if (result.data.image) {
+        dispatch(setImage({ value: result.data.image }));
+      }
       dispatch(setDate({ value: result.data.createdAt }));
       toast.success("Login successful.");
       // dispatch(setIsAuthenticated({ value: true }));
