@@ -6,6 +6,8 @@ const backendURL = import.meta.env.VITE_APP_BACKEND_URL;
 
 export const connectSocket = () => {
   socket = io(backendURL, {
+    transports: ["websocket"],
+    secure: true,
     query: {
       userId: JSON.parse(localStorage.getItem("id")),
     },
