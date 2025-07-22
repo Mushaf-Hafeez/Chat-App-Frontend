@@ -69,9 +69,10 @@ const ChatMessages = () => {
                 <div className="max-w-[30vw] bg-stone-800 p-2 flex flex-col gap-1 rounded">
                   {message.image && (
                     <img
+                      onClick={() => window.open(message.image, "_blank")}
                       src={message.image}
                       alt="Error while rendering the image"
-                      className="size-60 rounded object-cover"
+                      className="size-60 rounded object-cover cursor-pointer"
                     />
                   )}
                   {message.text}

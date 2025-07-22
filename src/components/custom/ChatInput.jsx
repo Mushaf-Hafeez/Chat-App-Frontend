@@ -39,7 +39,7 @@ const ChatInput = () => {
           receiverId: selectedUser._id,
           text: data.message && data.message.length > 0 && data.message,
           image: data.pic && data.pic.length > 0 && data.pic[0],
-          createdAt: new Date(),
+          createdAt: new Date().toISOString(),
         },
       })
     );

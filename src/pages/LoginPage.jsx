@@ -38,6 +38,7 @@ const LoginPage = () => {
     const result = await login(data); // No need for a try-catch here since login handles it
 
     if (result.success) {
+      localStorage.setItem("isAuthenticated", JSON.stringify(true));
       localStorage.setItem("id", JSON.stringify(result.data.id));
       localStorage.setItem("name", JSON.stringify(result.data.name));
       localStorage.setItem("email", JSON.stringify(result.data.email));
@@ -51,11 +52,11 @@ const LoginPage = () => {
       if (result.data.image) {
         dispatch(setImage({ value: result.data.image }));
       }
+      dispatch(setIsAuthenticated({ value: true }));
       dispatch(setDate({ value: result.data.createdAt }));
       toast.success("Login successful.");
-      // dispatch(setIsAuthenticated({ value: true }));
       dispatch(setSocketConnect({ value: connectSocket() }));
-      dispatch(setUsersOnline({ value: onlineUsers }));
+      // dispatch(setUsersOnline({ value: onlineUsers }));
       reset();
       navigate("/");
     } else {
@@ -81,7 +82,7 @@ const LoginPage = () => {
   };
 
   useEffect(() => {
-    checking();
+    // checking();
   }, []);
 
   return (
