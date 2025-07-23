@@ -3,7 +3,7 @@ import { MessageSquare } from "lucide-react";
 
 const DefaultChat = () => {
   return (
-    <div className="w-full center column">
+    <div className="h-screen w-full center column">
       <span className="p-2 rounded bg-stone-200 animate-bounce">
         <MessageSquare color="black" size={"48"} />
       </span>

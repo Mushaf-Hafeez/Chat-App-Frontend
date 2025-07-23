@@ -86,7 +86,7 @@ const LoginPage = () => {
   }, []);
 
   return (
-    <div className="main-container column pt-16 md:pt-20 lg:pt-24">
+    <div className="main-container column">
       <span className="p-2 bg-stone-700 center rounded mb-4">
         <MessageSquare size={50} />
       </span>

@@ -34,7 +34,7 @@ const Chat = () => {
   }
 
   return (
-    <div className="h-full w-full relative">
+    <div className="h-screen w-full bg-stone-900 relative">
       <ChatHeader />
       {/* Todo: display all the messages here and the skeleton when fetching all the messagees. */}
       {/* <ChatSkeleton /> */}

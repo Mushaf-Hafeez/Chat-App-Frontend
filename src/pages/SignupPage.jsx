@@ -53,7 +53,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="main-container center column pt-16 md:mt-20 lg:mt-24 ">
+    <div className="main-container center column">
       <span className="p-2 bg-stone-700 center rounded mb-4">
         <MessageSquare size={50} />
       </span>
