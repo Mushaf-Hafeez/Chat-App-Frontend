@@ -24,7 +24,7 @@
 
 @layer components {
   .main-container {
-    @apply min-h-screen md:min-h-[90vh] w-full bg-stone-900 text-white flex items-center justify-center;
+    @apply min-h-screen md:min-h-[100vh] w-full bg-stone-900 text-white flex items-center justify-center;
   }
   .center {
     @apply flex items-center justify-center;

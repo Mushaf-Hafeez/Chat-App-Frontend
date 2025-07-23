@@ -36,7 +36,7 @@ const HomePage = () => {
   }, [isAuthenticated]);
 
   return (
-    <main className="h-[84vh] w-full bg-stone-900 text-white flex gap-10">
+    <main className="h-screen w-full bg-stone-900 text-white flex gap-10">
       <Sidebar />
       <Chat />
     </main>

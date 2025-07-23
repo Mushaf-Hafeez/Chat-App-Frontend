@@ -63,7 +63,7 @@ const Navbar = () => {
   useEffect(() => {}, [image]);
 
   return (
-    <header className="bg-stone-900 text-white flex items-center justify-between py-2 sm:py-4 md:py-6 lg:py-9 px-4 sm:px-10 md:px-20 lg:px-40">
+    <header className="fixed left-0 top-0 w-full bg-stone-900 text-white flex items-center justify-between py-2 sm:py-4 md:py-6 lg:py-9 px-4 sm:px-10 md:px-20 lg:px-40">
       {/* Logo of the App */}
       <Link to={"/"} className="flex items-center gap-2 cursor-pointer">
         <span className="p-2 rounded bg-stone-800 center">

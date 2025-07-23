@@ -37,13 +37,13 @@ const Sidebar = () => {
   }
 
   return (
-    <aside className="h-full w-1/4 bg-stone-900 text-white rounded p-5 flex flex-col gap-2">
+    <aside className="h-full w-1/4 bg-stone-900 text-white rounded p-5 flex flex-col gap-2 mt-16 md:mt-20 lg:mt-24">
       {users.length > 0 &&
         users.map((user, index) => (
           <div
             onClick={() => handleClick(user)}
             key={index}
-            className={`relative flex items-center justify-center md:justify-start  gap-5 p-2 cursor-pointer ${
+            className={`relative flex items-center gap-5 p-2 cursor-pointer ${
               selectedUser._id == user._id && "bg-stone-800 rounded"
             }`}
           >
