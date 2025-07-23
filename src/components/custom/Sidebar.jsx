@@ -43,7 +43,7 @@ const Sidebar = () => {
           <div
             onClick={() => handleClick(user)}
             key={index}
-            className={`relative flex items-center gap-5 p-2 cursor-pointer ${
+            className={`relative flex items-center justify-center md:justify-start  gap-5 p-2 cursor-pointer ${
               selectedUser._id == user._id && "bg-stone-800 rounded"
             }`}
           >
@@ -55,9 +55,9 @@ const Sidebar = () => {
             <img
               src={user.image || "/default_profile.png"}
               alt={user.name}
-              className="size-10 rounded-full object-cover"
+              className="size-8 md:size-10 rounded-full object-cover"
             />
-            <div className="flex flex-col gap-1">
+            <div className="hidden md:flex flex-col gap-1">
               <h3 className="font-semibold">{user.name}</h3>
               <p className="text-sm text-stone-500">
                 {usersOnline &&
