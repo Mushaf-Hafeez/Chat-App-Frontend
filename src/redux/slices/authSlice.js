@@ -27,6 +27,13 @@ export const authReducer = createSlice({
     setIsUpdating: (state, action) => {
       state.isUpdating = action.payload.value;
     },
+    clearAuth: (state) => {
+      state.isAuthenticated = false,
+      state.isLogging = false,
+      state.isSigning = false,
+      state.isLoggingOut = false,
+      state.isUpdating = false,
+    }
   },
 });
 
@@ -36,5 +43,6 @@ export const {
   setIsLoggingOut,
   setIsAuthenticated,
   setIsUpdating,
+  clearAuth
 } = authReducer.actions;
 export default authReducer.reducer;

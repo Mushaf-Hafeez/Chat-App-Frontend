@@ -37,9 +37,16 @@ export const profileSlice = createSlice({
     setDate: (state, action) => {
       state.createdAt = action.payload.value;
     },
+    clearProfile: (state) => {
+      state.id = null,
+      state.name= null,
+      state.email = null,
+      state.image = null,
+      state.createdAt= null,
+    }
   },
 });
 
-export const { setId, setName, setEmail, setImage, setDate } =
+export const { setId, setName, setEmail, setImage, setDate, clearProfile } =
   profileSlice.actions;
 export default profileSlice.reducer;

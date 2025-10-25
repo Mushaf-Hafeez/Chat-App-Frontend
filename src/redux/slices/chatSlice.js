@@ -38,6 +38,15 @@ const chatSlice = createSlice({
     setUsersOnline: (state, action) => {
       state.usersOnline = action.payload.value;
     },
+    clearChat: (state) => {
+      state.users =  [],
+      state.isUsersLoading = false,
+      state.messages = [],
+      state.isMessagesLoading = false,
+      state.selectedUser = {},
+      state.socketConnect = null,
+      state.usersOnline = [],state.
+    },
   },
 });
 
@@ -50,6 +59,7 @@ export const {
   addMessage,
   setSocketConnect,
   setUsersOnline,
+  clearChat,
 } = chatSlice.actions;
 
 export default chatSlice.reducer;

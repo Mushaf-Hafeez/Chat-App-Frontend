@@ -1,11 +1,16 @@
 import React, { useEffect } from "react";
 import { checkAuth } from "@/services/auth";
-import { setIsAuthenticated } from "@/redux/slices/authSlice";
+import { clearAuth, setIsAuthenticated } from "@/redux/slices/authSlice";
 import { useSelector, useDispatch } from "react-redux";
 import Sidebar from "@/components/custom/Sidebar";
 import Chat from "@/components/custom/Chat";
 import { connectSocket, message, onlineUsers } from "@/utils";
-import { setUsersOnline, setSocketConnect } from "@/redux/slices/chatSlice";
+import {
+  setUsersOnline,
+  setSocketConnect,
+  clearChat,
+} from "@/redux/slices/chatSlice";
+import { clearProfile } from "@/redux/slices/profileSlice";
 
 const HomePage = () => {
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -21,6 +26,10 @@ const HomePage = () => {
       }
     } catch (error) {
       console.log("Error in the checking function: ", error.message);
+      localStorage.clear();
+      dispatch(clearAuth());
+      dispatch(clearChat());
+      dispatch(clearProfile());
     }
   };
 
