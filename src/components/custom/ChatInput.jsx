@@ -38,7 +38,7 @@ const ChatInput = () => {
         value: {
           receiverId: selectedUser._id,
           text: data.message && data.message.length > 0 && data.message,
-          image: data.pic && data.pic.length > 0 && data.pic[0],
+          image: data.pic && data.pic.length > 0 && preview, // change data.pic[0] -> preview
           createdAt: new Date().toISOString(),
         },
       })
