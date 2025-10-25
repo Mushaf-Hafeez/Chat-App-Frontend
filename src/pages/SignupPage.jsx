@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 import { setIsSigning } from "@/redux/slices/authSlice";
@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import toast from "react-hot-toast";
 import { setId, setName, setEmail, setDate } from "@/redux/slices/profileSlice";
 import { setUsersOnline, setSocketConnect } from "@/redux/slices/chatSlice";
-import { onlineUsers } from "@/utils";
+import { connectSocket, onlineUsers } from "@/utils";
 
 const SignupPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -48,7 +48,6 @@ const SignupPage = () => {
     } else {
       toast.error(result.message || "An unexpected error occurred.");
     }
-
     dispatch(setIsSigning({ value: false }));
   };
 
