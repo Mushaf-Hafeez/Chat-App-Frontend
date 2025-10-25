@@ -39,13 +39,13 @@ const chatSlice = createSlice({
       state.usersOnline = action.payload.value;
     },
     clearChat: (state) => {
-      state.users =  [],
-      state.isUsersLoading = false,
-      state.messages = [],
-      state.isMessagesLoading = false,
-      state.selectedUser = {},
-      state.socketConnect = null,
-      state.usersOnline = [],state.
+      state.users = [];
+      state.isUsersLoading = false;
+      state.messages = [];
+      state.isMessagesLoading = false;
+      state.selectedUser = {};
+      state.socketConnect = null;
+      state.usersOnline = [];
     },
   },
 });

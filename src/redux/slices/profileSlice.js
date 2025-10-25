@@ -38,12 +38,12 @@ export const profileSlice = createSlice({
       state.createdAt = action.payload.value;
     },
     clearProfile: (state) => {
-      state.id = null,
-      state.name= null,
-      state.email = null,
-      state.image = null,
-      state.createdAt= null,
-    }
+      state.id = null;
+      state.name = null;
+      state.email = null;
+      state.image = null;
+      state.createdAt = null;
+    },
   },
 });
 

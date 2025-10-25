@@ -18,6 +18,8 @@ const Sidebar = () => {
     dispatch(setIsUsersLoading({ value: true }));
     const result = await fetchUsers();
 
+    console.log(result);
+
     if (result && result.success) {
       dispatch(setUsers({ value: result.data }));
     }
